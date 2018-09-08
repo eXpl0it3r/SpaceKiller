@@ -17,7 +17,7 @@ std::string generate_counting_string(unsigned int counter, std::size_t width)
 
 int main()
 {
-    sf::RenderWindow window{ {310, 120}, "Space Killer" };
+    sf::RenderWindow window{ {310, 120}, "Space Killer", sf::Style::Close | sf::Style::Titlebar };
     window.setFramerateLimit(30);
 
     sf::Image icon;
