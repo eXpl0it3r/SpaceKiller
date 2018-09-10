@@ -74,6 +74,8 @@ int main()
 
                     started = false;
                     finished = false;
+
+                    counter = 0u;
                 }
             }
         }
