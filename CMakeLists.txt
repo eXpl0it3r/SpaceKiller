@@ -14,8 +14,13 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 add_executable(SpaceKiller main.cpp Icon.hpp TenStamps.hpp)
-target_link_libraries(SpaceKiller PRIVATE sfml-graphics)
 target_compile_features(SpaceKiller PRIVATE cxx_std_17)
+target_link_libraries(SpaceKiller PRIVATE sfml-graphics)
+
+if(WIN32)
+    set_target_properties(SpaceKiller PROPERTIES WIN32_EXECUTABLE TRUE)
+    target_link_libraries(SpaceKiller PRIVATE sfml-main)
+endif()
 
 if(WIN32 AND MSVC)
     set_property(TARGET SpaceKiller PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
