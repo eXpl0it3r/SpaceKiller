@@ -15,15 +15,20 @@ This is an entry to the first [Hopson](https://www.youtube.com/channel/UCeQhZOvN
 
 ## Building
 
-The Visual Studio project file is provided, but it's really just one C++ source file and two header files. Don't forget to link [SFML](https://www.sfml-dev.org/).
+Use CMake to build Space Killer and it will automatically build SFML for you!
+
+```
+cmake -S . -B build
+cmake --build build
+```
 
 - `main.cpp` holds all the game logic
-- `TenStamps.hpp` holds the embedded data of the font [TenStamps](http://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=329) by Geoff
+- `TenStamps.hpp` holds the embedded data of the font [TenStamps](https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=329) by Geoff
 - `Icon.hpp` hold the embedded data of the window icon
 
 ## Tools & Libraries
 
 - [SFML](https://www.sfml-dev.org/) - Window and graphics rendering
-- [PhotoFiltre 7](http://www.photofiltre-studio.com/pf7-en.htm) - Creating the window icon
-- [Visual Studio 2017](https://visualstudio.microsoft.com/) - Code editing
+- [PhotoFiltre 7](https://www.photofiltre-studio.com/pf7-en.htm) - Creating the window icon
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) - Code editing
 - [xxd](https://manpages.debian.org/testing/xxd/xxd.1.en.html) - Converting the binary data to a C array
